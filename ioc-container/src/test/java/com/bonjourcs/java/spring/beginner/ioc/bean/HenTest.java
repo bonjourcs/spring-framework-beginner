@@ -22,4 +22,14 @@ public class HenTest {
         System.out.println(hen);
 
     }
+
+    @Test
+    public void testInstantiatenChicken(){
+
+        ApplicationContext applicationContext
+                = new ClassPathXmlApplicationContext(new String[]{"hen.xml"});
+
+        Chicken chicken = applicationContext.getBean(Chicken.class);
+        System.out.println(chicken);
+    }
 }

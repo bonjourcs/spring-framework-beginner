@@ -35,7 +35,7 @@ public class PersonTest {
     }
 
     @Test
-    public void testInstantiatePersonByConsturctorAndGetterDI() {
+    public void testInstantiatePersonByConstructorAndGetterDI() {
 
         ApplicationContext applicationContext
                 = new ClassPathXmlApplicationContext(new String[]{"person.xml"});

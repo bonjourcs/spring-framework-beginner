@@ -25,4 +25,21 @@ public class Person {
      */
     private int age;
 
+    /**
+     * 地址
+     */
+    private Address address;
+
+    /**
+     * 地址内部类
+     */
+    @ToString
+    public static class Address {
+        /**
+         * 地址名称
+         */
+        @Getter
+        @Setter
+        private String name;
+    }
 }

@@ -30,6 +30,14 @@ public class Person {
      */
     private Address address;
 
+    public Person() {
+    }
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
     /**
      * 地址内部类
      */

@@ -2,7 +2,6 @@ package com.bonjourcs.java.spring.beginner.ioc.bean;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -19,19 +18,31 @@ public class PersonTest {
         ApplicationContext applicationContext
                 = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
 
-        Person person = (Person)applicationContext.getBean("person0");
+        Person person = (Person) applicationContext.getBean("person0");
         System.out.println(person);
 
     }
 
     @Test
-    public void testInstantiatePersonByConstructorBasedDI(){
+    public void testInstantiatePersonByConstructorBasedDI() {
 
         ApplicationContext applicationContext
                 = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
 
-        Person person = (Person)applicationContext.getBean("person1");
+        Person person = (Person) applicationContext.getBean("person1");
         System.out.println(person);
 
     }
+
+    @Test
+    public void testInstantiatePersonByConsturctorAndGetterDI() {
+
+        ApplicationContext applicationContext
+                = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
+
+        Person person = (Person) applicationContext.getBean("person2");
+        System.out.println(person);
+
+    }
+
 }

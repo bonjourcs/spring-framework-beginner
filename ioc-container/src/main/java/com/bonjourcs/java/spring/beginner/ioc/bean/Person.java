@@ -26,6 +26,11 @@ public class Person {
     private int age;
 
     /**
+     * 手机号码
+     */
+    private String phone;
+
+    /**
      * 地址
      */
     private Address address;

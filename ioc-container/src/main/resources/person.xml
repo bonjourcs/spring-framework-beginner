@@ -25,4 +25,11 @@
         <constructor-arg index="1" value="20"/>
     </bean>
 
+    <!-- 基于构造器和setter的依赖注入 -->
+    <bean id="person2" class="com.bonjourcs.java.spring.beginner.ioc.bean.Person">
+        <constructor-arg name="name" value="BCS"/>
+        <constructor-arg name="age" value="20"/>
+        <property name="phone" value="18312341234"/>
+    </bean>
+
 </beans>

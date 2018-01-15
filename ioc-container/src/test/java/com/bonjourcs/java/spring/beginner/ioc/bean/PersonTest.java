@@ -93,4 +93,15 @@ public class PersonTest {
 
     }
 
+    @Test
+    public void testNullAndEmptyString(){
+
+        ApplicationContext applicationContext
+                = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
+
+        Person person = (Person) applicationContext.getBean("person7");
+        System.out.println(person);
+
+    }
+
 }

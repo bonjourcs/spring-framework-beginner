@@ -77,4 +77,17 @@
         </property>
     </bean>
 
+    <bean id="person7" class="com.bonjourcs.java.spring.beginner.ioc.bean.Person">
+        <property name="name" value=""/>
+        <property name="address">
+            <null/>
+        </property>
+        <property name="score">
+            <map>
+                <entry key="Math" value="120"/>
+                <entry key="CS" value="100"/>
+            </map>
+        </property>
+    </bean>
+
 </beans>

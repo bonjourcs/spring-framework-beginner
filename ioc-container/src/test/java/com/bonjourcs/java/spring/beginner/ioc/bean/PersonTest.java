@@ -57,4 +57,28 @@ public class PersonTest {
 
     }
 
+    @Test
+    public void testInstantiatePersonWithList(){
+
+
+        ApplicationContext applicationContext
+                = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
+
+        Person person = (Person) applicationContext.getBean("person4");
+        System.out.println(person);
+
+    }
+
+    @Test
+    public void testInstantiatePersonWithMap(){
+
+
+        ApplicationContext applicationContext
+                = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
+
+        Person person = (Person) applicationContext.getBean("person5");
+        System.out.println(person);
+
+    }
+
 }

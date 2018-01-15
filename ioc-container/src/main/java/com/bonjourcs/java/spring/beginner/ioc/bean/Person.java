@@ -4,6 +4,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.List;
+import java.util.Map;
+
 /**
  * @author Liang Chenghao
  * Description: 类：人
@@ -34,6 +37,16 @@ public class Person {
      * 地址
      */
     private Address address;
+
+    /**
+     * 邮箱地址
+     */
+    private List<String> emails;
+
+    /**
+     * 得分
+     */
+    private Map<String, String> score;
 
     public Person() {
     }

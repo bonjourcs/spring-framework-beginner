@@ -45,4 +45,16 @@ public class PersonTest {
 
     }
 
+    @Test
+    public void testInstantiatePersonInnerClass(){
+
+
+        ApplicationContext applicationContext
+                = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
+
+        Person person = (Person) applicationContext.getBean("person3");
+        System.out.println(person);
+
+    }
+
 }

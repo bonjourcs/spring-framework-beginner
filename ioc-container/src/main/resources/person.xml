@@ -7,14 +7,7 @@
     <bean id="person0" class="com.bonjourcs.java.spring.beginner.ioc.bean.Person">
         <property name="name" value="BCS"/>
         <property name="age" value="20"/>
-        <property name="address">
-            <bean id="innerAddress" class="com.bonjourcs.java.spring.beginner.ioc.bean.Person$Address">
-                <!--<property name="name" value="HZ.CN"/>-->
-                <property name="name">
-                    <idref bean="address"/>
-                </property>
-            </bean>
-        </property>
+        <property name="address" ref="address"/>
     </bean>
 
     <!-- 用于内部类的Bean定义 -->

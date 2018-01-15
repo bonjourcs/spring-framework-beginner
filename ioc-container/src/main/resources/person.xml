@@ -9,7 +9,10 @@
         <property name="age" value="20"/>
         <property name="address">
             <bean id="innerAddress" class="com.bonjourcs.java.spring.beginner.ioc.bean.Person$Address">
-                <property name="name" value="HZ.CN"/>
+                <!--<property name="name" value="HZ.CN"/>-->
+                <property name="name">
+                    <idref bean="address"/>
+                </property>
             </bean>
         </property>
     </bean>

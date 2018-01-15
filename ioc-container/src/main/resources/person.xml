@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- 最简单的Bean定义 -->
@@ -77,6 +77,7 @@
         </property>
     </bean>
 
+    <!-- 空字符串和空 -->
     <bean id="person7" class="com.bonjourcs.java.spring.beginner.ioc.bean.Person">
         <property name="name" value=""/>
         <property name="address">
@@ -90,4 +91,10 @@
         </property>
     </bean>
 
+    <!-- p注解 -->
+    <bean id="person8"
+          class="com.bonjourcs.java.spring.beginner.ioc.bean.Person"
+          p:name="BCS"
+          p:age="20">
+    </bean>
 </beans>

@@ -103,5 +103,16 @@ public class PersonTest {
         System.out.println(person);
 
     }
+    
+    @Test
+    public void testPNamespace(){
+
+        ApplicationContext applicationContext
+                = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
+
+        Person person = (Person) applicationContext.getBean("person8");
+        System.out.println(person);
+
+    }
 
 }

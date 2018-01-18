@@ -115,4 +115,15 @@ public class PersonTest {
 
     }
 
+    @Test
+    public void testAutoWired(){
+
+        ApplicationContext applicationContext
+                = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
+
+        Person person = (Person) applicationContext.getBean("person9");
+        System.out.println(person);
+
+    }
+
 }

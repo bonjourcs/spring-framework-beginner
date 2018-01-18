@@ -97,4 +97,8 @@
           p:name="BCS"
           p:age="20">
     </bean>
+
+    <!-- 自动装载 -->
+    <bean id="person9" autowire="byName"
+          class="com.bonjourcs.java.spring.beginner.ioc.bean.Person"/>
 </beans>

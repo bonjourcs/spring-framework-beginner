@@ -126,4 +126,15 @@ public class PersonTest {
 
     }
 
+    @Test
+    public void testAutoWiredLimitation(){
+
+        ApplicationContext applicationContext
+                = new ClassPathXmlApplicationContext(new String[]{"person.xml"});
+
+        Person person = (Person) applicationContext.getBean("person10");
+        System.out.println(person);
+
+    }
+
 }

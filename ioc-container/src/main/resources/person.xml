@@ -101,4 +101,17 @@
     <!-- 自动装载 -->
     <bean id="person9" autowire="byName"
           class="com.bonjourcs.java.spring.beginner.ioc.bean.Person"/>
+
+    <!-- 自动装载被覆盖 -->
+    <bean id="person10" autowire="constructor"
+          class="com.bonjourcs.java.spring.beginner.ioc.bean.Person">
+        <constructor-arg name="address">
+            <bean class="com.bonjourcs.java.spring.beginner.ioc.bean.Person$Address">
+                <property name="name" value="Hangzhou.China"/>
+            </bean>
+        </constructor-arg>
+        <constructor-arg name="age" value="10"/>
+        <constructor-arg name="name" value="B.CS"/>
+    </bean>
+
 </beans>

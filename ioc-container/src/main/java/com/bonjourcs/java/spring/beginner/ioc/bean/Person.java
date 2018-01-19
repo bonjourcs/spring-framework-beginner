@@ -56,6 +56,11 @@ public class Person {
         this.age = age;
     }
 
+    public Person(String name, int age, Address address) {
+        this(name, age);
+        this.address = address;
+    }
+
     /**
      * 地址内部类
      */

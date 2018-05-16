@@ -138,4 +138,18 @@ public class PersonTest {
 
 	}
 
+	/**
+	 * 测试不自动auto-wired，autowire-candidate属性只适合抑制byType的自动注入
+	 */
+	@Test
+	public void testExcludeAutowiring() {
+
+		ApplicationContext applicationContext
+				= new ClassPathXmlApplicationContext(new String[]{"person.xml"});
+		Person person = (Person) applicationContext.getBean("person11");
+
+		Assert.assertNull(person.getSchool());
+
+	}
+
 }

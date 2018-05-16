@@ -32,7 +32,10 @@ public class Person {
      * 手机号码
      */
     private String phone;
-
+    /**
+     * 学校
+     */
+    private School school;
     /**
      * 地址
      */

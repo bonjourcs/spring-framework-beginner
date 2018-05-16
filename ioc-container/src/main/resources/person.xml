@@ -114,4 +114,15 @@
         <constructor-arg name="name" value="B.CS"/>
     </bean>
 
+    <!-- 学校的bean，禁用自动装载 -->
+    <bean id="school"
+          class="com.bonjourcs.java.spring.beginner.ioc.bean.School"
+          autowire-candidate="false">
+        <property name="name" value="THU"/>
+    </bean>
+    <!-- 测试是否会注入school属性 -->
+    <bean id="person11" autowire="byType" class="com.bonjourcs.java.spring.beginner.ioc.bean.Person">
+        <property name="name" value="BCS"/>
+    </bean>
+
 </beans>

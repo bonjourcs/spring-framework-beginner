@@ -1,13 +1,15 @@
 # Spring Framework Beginner 
 
+[![Build Status](https://travis-ci.org/bonjourcs/spring-framework-beginner.svg?branch=master)](https://travis-ci.org/bonjourcs/spring-framework-beginner)
+
 一个基于 [Spring (4.3.9) 官方文档](https://docs.spring.io/spring/docs/4.3.9.RELEASE/spring-framework-reference/htmlsingle/)的 Spring 代码练习项目。
 只为了解：在 Spring 框架下，如何编写 Web 应用。
 
-# Modules
+# 模块组成
 
 - ioc-container
 
-# License
+# 协议
 
 WTFPL 2.0
 

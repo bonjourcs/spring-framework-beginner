@@ -1,5 +1,6 @@
 package com.bonjourcs.java.spring.beginner.ioc.bean;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,24 +13,24 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class HenTest {
 
-    @Test
-    public void testInstantiateHenByFactoryMethod() {
+	@Test
+	public void testInstantiateHenByFactoryMethod() {
 
-        ApplicationContext applicationContext
-                = new ClassPathXmlApplicationContext(new String[]{"hen.xml"});
+		ApplicationContext applicationContext
+				= new ClassPathXmlApplicationContext(new String[]{"hen.xml"});
 
-        Hen hen = applicationContext.getBean(Hen.class);
-        System.out.println(hen);
+		Hen hen = applicationContext.getBean(Hen.class);
+		Assert.assertNotNull(hen);
 
-    }
+	}
 
-    @Test
-    public void testInstantiatenChicken(){
+	@Test
+	public void testInstantiateChicken() {
 
-        ApplicationContext applicationContext
-                = new ClassPathXmlApplicationContext(new String[]{"hen.xml"});
+		ApplicationContext applicationContext
+				= new ClassPathXmlApplicationContext(new String[]{"hen.xml"});
 
-        Chicken chicken = applicationContext.getBean(Chicken.class);
-        System.out.println(chicken);
-    }
+		Chicken chicken = applicationContext.getBean(Chicken.class);
+		Assert.assertNull(chicken.getName());
+	}
 }

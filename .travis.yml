@@ -1,9 +1,0 @@
-## language
-language: java
-## notification settings
-notifications:
-  email:
-    recipients:
-      - lch_office@foxmail.com
-    on_success: never
-    on_failure: always

@@ -8,6 +8,7 @@
 # 模块组成
 
 - ioc-container
+- spring-aop
 
 # 协议
 
